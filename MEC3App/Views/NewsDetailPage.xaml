@@ -1,0 +1,38 @@
+﻿
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:MEC3App.ViewModel" 
+             x:DataType="viewmodel:NewsDetailViewModel"
+             x:Class="MEC3App.Views.NewsDetailPage">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="house.png" Clicked="returnHome"/>
+    </ContentPage.ToolbarItems>
+    
+    <Grid Padding="20,10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <ScrollView Grid.Row="0" HorizontalOptions="FillAndExpand">
+            <Grid RowSpacing="0" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <StackLayout Grid.Row="2" Spacing="20" HorizontalOptions="FillAndExpand">
+                    <Image Source="{Binding NewsCard.Image}"></Image>
+                    <Label Text="{Binding NewsCard.Perex}" TextColor="#262626" FontSize="22" Margin="0, 0, 0, 0" HorizontalOptions="Start" />
+                    <WebView HorizontalOptions="FillAndExpand" HeightRequest="1200" VerticalOptions="FillAndExpand" >
+                        <WebView.Source>
+                            <HtmlWebViewSource Html="{Binding NewsCard.Content}"/>
+                        </WebView.Source>
+                    </WebView>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>
+
