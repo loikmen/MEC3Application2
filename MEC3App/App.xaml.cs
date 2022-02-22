@@ -41,6 +41,10 @@ namespace MEC3AppSample
 
         protected override void OnStart()
         {
+            if (database == null)
+            {
+                database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db3"));
+            }
         }
 
         protected override void OnSleep()

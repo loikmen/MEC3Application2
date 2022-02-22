@@ -10,10 +10,10 @@ x:Class="MEC3App.Views.NewsPage"
         <vm1:NewsViewModel />
     </ContentPage.BindingContext>
     <StackLayout>
-        <Grid HeightRequest="60" BackgroundColor="black">
-            <ImageButton Source="house.png" HorizontalOptions="End" BackgroundColor="Transparent" HeightRequest="40" Clicked="returnHome">
+        <Grid BackgroundColor="Black" HeightRequest="55">
+            <ImageButton Source="house.png" HorizontalOptions="End" Margin="10,0" BackgroundColor="Transparent" HeightRequest="30" Clicked="returnHome">
             </ImageButton>
-            <ImageButton Margin="5" Source="https://icon-library.com/images/return-button-icon/return-button-icon-3.jpg" HorizontalOptions="Start" BackgroundColor="Transparent" HeightRequest="40" Clicked="pushBack">
+            <ImageButton Margin="15,0" Source="back.png" HorizontalOptions="Start" BackgroundColor="Transparent" HeightRequest="30" Clicked="pushBack">
             </ImageButton>
         </Grid>
         <ScrollView>

@@ -181,4 +181,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\user2Logged.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back.png" />
+  </ItemGroup>
 </Project>
